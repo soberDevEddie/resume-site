@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Eduardo Ocampo — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* Source for the PDF. Edit the text here, then run resume-pdf/build.sh */
+  @page { size: Letter; margin: 0; }
+
+  :root {
+    --ink: #292726;
+    --grey: #727070;
+    --accent: #cc6434;
+    --link: #a04818;
+    --rule-light: #dddbdb;
+    --tag-bg: #fbf5f3;
+    --body: 9pt;            /* base body size; tweak these to fit one page */
+    --lh: 1.37;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 612pt; height: 792pt; }
+  body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size: var(--body);
+    line-height: var(--lh);
+    color: var(--ink);
+    padding: 27pt 41pt 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: var(--link); text-decoration: none; }
+
+  /* Header */
+  header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    padding-bottom: 7pt; border-bottom: 1.4pt solid var(--ink);
+  }
+  h1 {
+    font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+    font-stretch: 100%;
+    font-weight: 800; font-size: 29.5pt; line-height: 1; letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  .role {
+    font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700; font-size: 9pt; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); padding-bottom: 3pt;
+  }
+  .contact { display: flex; gap: 15pt; margin-top: 7pt; color: var(--grey); }
+  .summary { margin-top: 9pt; font-size: 9.4pt; line-height: 1.5; }
+
+  /* Columns */
+  .cols {
+    position: relative; display: grid; grid-template-columns: 277.5pt 198pt; column-gap: 55pt;
+    margin-top: 11pt;
+  }
+  .cols::before {
+    content: ''; position: absolute; top: 0; bottom: 0; left: 305pt; width: 0.8pt; background: var(--rule-light);
+  }
+
+  h2 {
+    font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 800; font-size: 9.4pt; letter-spacing: 0.22em; text-transform: uppercase;
+    padding-bottom: 5.5pt; border-bottom: 1.2pt solid var(--ink); margin-bottom: 7pt;
+  }
+  h3 {
+    font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700; font-size: 10.8pt; line-height: 1.25;
+  }
+  section + section { margin-top: 11pt; }
+
+  /* Projects */
+  .project + .project { margin-top: 5.5pt; }
+  .project p { margin-top: 2pt; }
+  .project .links { font-size: 8.4pt; margin-top: 1.5pt; display: flex; gap: 11pt; }
+
+  /* Experience */
+  .job + .job { margin-top: 6.5pt; }
+  .job .head { display: flex; justify-content: space-between; align-items: baseline; }
+  .job .when { color: var(--grey); font-size: 9pt; }
+  .job .where { color: var(--grey); margin-top: 1pt; }
+  ul { margin: 2.5pt 0 0 11pt; }
+  li { padding-left: 1pt; }
+  li + li { margin-top: 1pt; }
+
+  /* Right column */
+  .right { }
+  .sub {
+    font-size: 7.9pt; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
+    margin-top: 6pt; font-weight: 500;
+  }
+  .sub:first-of-type { margin-top: 0; }
+  .skills p { margin-top: 1pt; }
+  .edu + .edu { margin-top: 7pt; }
+  .edu h3 { font-size: 10.2pt; }
+  .edu .meta { color: var(--grey); font-size: 8.8pt; }
+  .tags { display: flex; gap: 6pt; flex-wrap: wrap; margin-top: 8pt; }
+  .tag {
+    font-size: 8.6pt; line-height: 1; padding: 5.5pt 8pt;
+    border: 0.9pt solid var(--accent); color: var(--link);
+  }
+  .tag.filled { background: var(--tag-bg); border-color: var(--tag-bg); color: var(--ink); }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Eduardo Ocampo</h1>
+    <div class="role">Junior Full-Stack Developer</div>
+  </header>
+
+  <div class="contact">
+    <span>Chicago, IL</span>
+    <span>773-368-3584</span>
+    <a href="mailto:eocampo52@gmail.com">eocampo52@gmail.com</a>
+    <a href="https://github.com/soberDevEddie">github.com/soberDevEddie</a>
+  </div>
+
+  <p class="summary">
+    Full-stack developer with hands-on experience building production applications using React,
+    Next.js, Node.js, and MongoDB. Currently studying Computer Science at Triton Community College.
+    Proven ability to deliver both frontend-focused marketing sites and complex full-stack
+    applications. Seeking freelance and contract development work.
+  </p>
+
+  <div class="cols">
+    <div class="left">
+      <section>
+        <h2>Featured Projects</h2>
+
+        <div class="project">
+          <h3>FlashStudy</h3>
+          <p>Study app where users create and organize flashcards by subject, track progress, and authenticate. Built with Next.js, React, Node.js, and MongoDB.</p>
+          <div class="links"><a href="https://flash-cards-orcin-nine.vercel.app/login">flash-cards-orcin-nine.vercel.app</a></div>
+        </div>
+
+        <div class="project">
+          <h3>Nobleck Auto Repair</h3>
+          <p>Website for a Chicago auto repair shop with service details, customer reviews, tap-to-call and text actions, and a step-by-step appointment request form. Built with Next.js and React.</p>
+          <div class="links"><a href="https://solo-mechanic.vercel.app/">solo-mechanic.vercel.app</a></div>
+        </div>
+
+        <div class="project">
+          <h3>GitHub Finder</h3>
+          <p>Search tool that displays GitHub user profiles and repositories using real-time GitHub API integration, built with React.</p>
+          <div class="links"><a href="https://github-finder-v2-nine.vercel.app/">github-finder-v2-nine.vercel.app</a></div>
+        </div>
+
+        <div class="project">
+          <h3>Netflix Clone</h3>
+          <p>Streaming UI that fetches and displays movies and shows from the TMDB API in a Netflix-style layout, built with React.</p>
+          <div class="links"><a href="https://reelreact.netlify.app/">reelreact.netlify.app</a></div>
+        </div>
+
+        <div class="project">
+          <h3>Alexa Flower Shop &amp; Alex’s Hair Studio</h3>
+          <p>React landing and brochure sites for two local businesses, with service listings and booking information.</p>
+          <div class="links">
+            <a href="https://alexa-website-silk.vercel.app/">alexa-website-silk.vercel.app</a>
+            <a href="https://alexhairstudio-beta.vercel.app/">alexhairstudio-beta.vercel.app</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Work Experience</h2>
+
+        <div class="job">
+          <div class="head"><h3>Service Porter</h3><span class="when">2023–Present</span></div>
+          <div class="where">Alliance Service Group, Chicago, IL</div>
+          <ul>
+            <li>Communicated with coworkers and managers on completed tasks and technical issues</li>
+            <li>Kept operations seamless during high-volume periods</li>
+            <li>Collaborated across departments to resolve customer issues and minimize downtime</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="head"><h3>Sales Stylist</h3><span class="when">2021–2023</span></div>
+          <div class="where">Levi’s, Chicago, IL</div>
+          <ul>
+            <li>Met and exceeded individual sales goals through product knowledge and customer engagement</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="head"><h3>Sales Associate</h3><span class="when">2018–2021</span></div>
+          <div class="where">Honda City Chicago, Chicago, IL</div>
+          <ul>
+            <li>Generated new business through relationship-building, marketing, and strategic follow-up</li>
+            <li>Built communication and sales discipline through face-to-face interactions and lead nurturing</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="right">
+      <section class="skills">
+        <h2>Technical Skills</h2>
+        <div class="sub">Frontend</div>
+        <p>React, Next.js, HTML, CSS, Bootstrap, Tailwind CSS</p>
+        <div class="sub">Backend</div>
+        <p>Node.js, Express, MongoDB, REST APIs</p>
+        <div class="sub">Tools</div>
+        <p>Git, GitHub, Vercel, Netlify, TMDB API, GitHub API</p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="edu">
+          <h3>Triton Community College</h3>
+          <div>Computer Science, in progress (part-time)</div>
+          <div class="meta">Chicago, IL · Enrolled Fall 2025</div>
+        </div>
+        <div class="edu">
+          <h3>Web Development Bootcamp</h3>
+          <div>North Carolina State University</div>
+          <div class="meta">Attended 2024</div>
+        </div>
+        <div class="edu">
+          <h3>Harold Washington College</h3>
+          <div>Associate’s Degree</div>
+          <div class="meta">Chicago, IL · Completed 2023</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Available For</h2>
+        <div class="tags">
+          <span class="tag">Freelance</span>
+          <span class="tag">Contract</span>
+          <span class="tag filled">Full-Stack</span>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

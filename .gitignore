@@ -1,0 +1,16 @@
+node_modules
+dist
+.DS_Store
+*.local
+
+# Local tooling
+.claude/
+
+# Original template: its license allows use/modification but not redistributing it as-is
+template-original/
+
+# Personal photos that aren't used by the site (photo-4 is the hero image)
+src/assets/images/photos/photo-1.jpg
+src/assets/images/photos/photo-2.jpg
+src/assets/images/photos/photo-3.jpg
+src/assets/images/photos/photo-5.jpg

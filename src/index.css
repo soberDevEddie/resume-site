@@ -1,0 +1,181 @@
+/*
+  Based on the "Richard" resume template by TemplatesJungle (free for personal
+  and commercial use). Trimmed to the rules this site actually uses.
+*/
+
+:root {
+  --accent-color: #e54646;
+  --dark-color: #222222;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  --bs-link-color: #333;
+  --bs-link-hover-color: #333;
+  --bs-link-color-rgb: 40, 40, 40;
+  --bs-link-hover-color-rgb: 0, 0, 0;
+
+  --bs-body-font-family: 'Roboto', sans-serif;
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 2;
+  --bs-body-color: #333333;
+
+  --bs-primary: #e54646;
+  --bs-primary-rgb: 229, 70, 70;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #333333;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+h6 {
+  color: #333333;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Section spacing */
+.padding-large {
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+}
+.padding-medium {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+.padding-small {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .padding-large {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  .padding-medium {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* Anchored sections shouldn't hide under the fixed navbar */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  padding: 1.2rem 3rem;
+  transition: all 0.3s ease-in;
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: var(--accent-color);
+  --bs-btn-border-color: var(--accent-color);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: #e43232;
+  --bs-btn-hover-border-color: #e43232;
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: var(--accent-color);
+  --bs-btn-active-border-color: var(--accent-color);
+  --bs-btn-disabled-color: #ffffff;
+  --bs-btn-disabled-bg: #d3d7dd;
+  --bs-btn-disabled-border-color: var(--accent-color);
+}
+
+/* Navbar / offcanvas */
+.navbar.fixed-top {
+  transition: background-color 0.3s ease;
+}
+
+.offcanvas {
+  background-color: var(--dark-color);
+}
+
+.nav-link {
+  color: #fff;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--accent-color);
+}
+
+.social a {
+  color: #fff;
+}
+.social a:hover {
+  color: var(--accent-color);
+}
+
+/* Quote mark in testimonials */
+svg.quote {
+  color: rgba(51, 51, 51, 0.1);
+}
+
+/* Swiper pagination dots */
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--dark-color);
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+.testimonial-swiper {
+  --swiper-pagination-bottom: 0;
+}
+
+/* Forms */
+.form-control,
+.form-control:focus {
+  box-shadow: none;
+}
+.form-control:focus {
+  border-color: var(--dark-color);
+  outline: 0;
+}
+input,
+textarea {
+  border-color: var(--dark-color);
+  outline: 0;
+  box-shadow: none;
+}
+
+/* Expertise */
+.experties-number-size {
+  font-weight: 400;
+  font-size: 150px;
+}
+@media (max-width: 575px) {
+  .experties-number-size {
+    font-size: 100px;
+  }
+}
+
+/* Footer links */
+.footer-link:hover {
+  color: var(--accent-color) !important;
+}
